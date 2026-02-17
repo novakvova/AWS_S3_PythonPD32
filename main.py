@@ -13,4 +13,5 @@ response = s3_client.list_objects_v2(Bucket='my-girl-images') # List objects in 
 objects = response.get('Contents', [])
 print(objects)
 
-s3_client.download_file("my-girl-images", "dog.jpg", "downloaded_dog.jpg") # Download a file from S3
+#s3_client.download_file("my-girl-images", "dog.jpg", "downloaded_dog.jpg") # Download a file from S3
+s3_client.download_file("my-girl-images", "info.txt", "downloaded_info.txt")
