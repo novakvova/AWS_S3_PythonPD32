@@ -20,3 +20,11 @@ s3_client.put_bucket_versioning(
     Bucket='my-girl-images', 
     VersioningConfiguration={'Status': 'Enabled'}
 ) # Enable versioning on a bucket
+
+response = s3_client.list_object_versions(
+    Bucket='my-girl-images',
+    Prefix='info.txt'
+) # List object versions in a bucket
+
+for version in response.get('Versions'):
+    print(version)
